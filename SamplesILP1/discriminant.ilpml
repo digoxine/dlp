@@ -1,0 +1,6 @@
+let a = 8.0 and b=3.0 and c=7.5
+in let racine = b * b - ( 4 * a * c) in
+if racine > 0 then print("discriminant positif") else
+if racine == 0 then print("discriminant nul") else
+if racine < 0 then print("discriminant négatif") 
+ 
