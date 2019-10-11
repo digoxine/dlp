@@ -4,17 +4,21 @@
 
 /* Global variables */
 
+/* Global prototypes */
+
+/* Global functions */
+
 
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp91;
-    ilptmp91 = ILP_Integer2ILP (1);
-    ilptmp91 = ILP_Float2ILP (2.2);
-    ilptmp91 = ILP_TRUE;
-    ilptmp91 = ILP_String2ILP ("foobar");
-    return ilptmp91;
+    ILP_Object ilptmp120;
+    ilptmp120 = ILP_Integer2ILP (1);
+    ilptmp120 = ILP_Float2ILP (2.2);
+    ilptmp120 = ILP_TRUE;
+    ilptmp120 = ILP_String2ILP ("foobar");
+    return ilptmp120;
   }
 
 }

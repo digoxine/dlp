@@ -4,16 +4,20 @@
 
 /* Global variables */
 
+/* Global prototypes */
+
+/* Global functions */
+
 
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp44;
-    ILP_Object ilptmp45;
-    ilptmp44 = ILP_Integer2ILP (34);
-    ilptmp45 = ILP_Integer2ILP (43);
-    return ILP_Plus (ilptmp44, ilptmp45);
+    ILP_Object ilptmp73;
+    ILP_Object ilptmp74;
+    ilptmp73 = ILP_Integer2ILP (34);
+    ilptmp74 = ILP_Integer2ILP (43);
+    return ILP_Plus (ilptmp73, ilptmp74);
   }
 
 }

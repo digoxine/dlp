@@ -4,14 +4,18 @@
 
 /* Global variables */
 
+/* Global prototypes */
+
+/* Global functions */
+
 
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp3;
-    ilptmp3 = ILP_Integer2ILP (34);
-    return ILP_Opposite (ilptmp3);
+    ILP_Object ilptmp32;
+    ilptmp32 = ILP_Integer2ILP (34);
+    return ILP_Opposite (ilptmp32);
   }
 
 }

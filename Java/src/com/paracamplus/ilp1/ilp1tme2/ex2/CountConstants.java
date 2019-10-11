@@ -9,6 +9,7 @@ import com.paracamplus.ilp1.interfaces.IASTfloat;
 import com.paracamplus.ilp1.interfaces.IASTinteger;
 import com.paracamplus.ilp1.interfaces.IASTinvocation;
 import com.paracamplus.ilp1.interfaces.IASToperator;
+import com.paracamplus.ilp1.interfaces.IASTprogram;
 import com.paracamplus.ilp1.interfaces.IASTsequence;
 import com.paracamplus.ilp1.interfaces.IASTstring;
 import com.paracamplus.ilp1.interfaces.IASTunaryOperation;
@@ -23,33 +24,76 @@ import com.paracamplus.ilp1.interpreter.interfaces.ILexicalEnvironment;
 import com.paracamplus.ilp1.parser.ParseException;
 import com.paracamplus.ilp1.interpreter.Interpreter;;
 
-public class CountConstants extends Interpreter implements IASTvisitor<Object, ILexicalEnvironment, EvaluationException> {
+public class CountConstants implements IASTvisitor<Integer, Void, EvaluationException> {
 
-	public CountConstants(IGlobalVariableEnvironment globalVariableEnvironment,
-			IOperatorEnvironment operatorEnvironment) {
-		super(globalVariableEnvironment, operatorEnvironment);
-		// TODO Auto-generated constructor stub
+	public int countConstantsProg(IASTprogram prog) throws EvaluationException {
+		return prog.getBody().accept(this, null);
+		}
+
+	@Override
+	public Integer visit(IASTalternative iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return 1;
 	}
-  @Override 
-  public Object visit(IASTboolean iast, ILexicalEnvironment data) {
-	  return new Integer(1);
-  }
-  
-  @Override
-  public Object visit(IASTinteger iast, ILexicalEnvironment data) {
-	  return new Integer(1);
-  }
-  
-  
-  @Override
-	public Object visit(IASTfloat iast, ILexicalEnvironment lexenv) 
-          throws EvaluationException {
-      return new Integer(1);
-  }
-  
-  @Override
-	public Object visit(IASTstring iast, ILexicalEnvironment lexenv) 
-          throws EvaluationException {
-      return new Integer(1);
-  }
+
+	@Override
+	public Integer visit(IASTbinaryOperation iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+        return null;
+	}	
+
+	@Override
+	public Integer visit(IASTblock iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer visit(IASTboolean iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
+	@Override
+	public Integer visit(IASTfloat iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
+	@Override
+	public Integer visit(IASTinteger iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer visit(IASTinvocation iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
+	@Override
+	public Integer visit(IASTsequence iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer visit(IASTstring iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
+	@Override
+	public Integer visit(IASTunaryOperation iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer visit(IASTvariable iast, Void data) throws EvaluationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }

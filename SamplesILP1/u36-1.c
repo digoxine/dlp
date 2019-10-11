@@ -5,16 +5,20 @@
 /* Global variables */
 ILP_Object pi;
 
+/* Global prototypes */
+
+/* Global functions */
+
 
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp206;
-    ILP_Object ilptmp207;
-    ilptmp206 = ILP_PI;
-    ilptmp207 = ILP_Float2ILP (0.1415926535);
-    return ILP_Minus (ilptmp206, ilptmp207);
+    ILP_Object ilptmp235;
+    ILP_Object ilptmp236;
+    ilptmp235 = ILP_PI;
+    ilptmp236 = ILP_Float2ILP (0.1415926535);
+    return ILP_Minus (ilptmp235, ilptmp236);
   }
 
 }

@@ -33,6 +33,7 @@ import com.paracamplus.ilp1.parser.xml.IXMLParser;
 import com.paracamplus.ilp1.parser.xml.XMLParser;
 
 @RunWith(Parameterized.class)
+
 public class InterpreterTest2 {
     
     protected static String[] samplesDirName = { "SamplesILP1" }; 
