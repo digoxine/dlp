@@ -1,7 +1,12 @@
 package com.paracamplus.ilp2.ilp2tme3.vecteurs.interpreter.primitive;
 
+import java.lang.reflect.ParameterizedType;
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.List;
 import java.util.Vector;
+
+import org.junit.runners.Parameterized;
 
 import com.paracamplus.ilp1.interpreter.interfaces.EvaluationException;
 import com.paracamplus.ilp1.interpreter.primitive.Primitive;
@@ -21,14 +26,38 @@ public class makeVector<E> extends Primitive{
 	public Object apply(Object taille, Object valeur) throws EvaluationException{
 		if ( taille instanceof BigInteger ) {
 			BigInteger bi1= (BigInteger) taille;
-			Vector<E> res = new <E> Vector();
-
+			//Class<E> persistentClass = (Class<E>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 			if ( valeur instanceof BigInteger) {
-			
+				//On creee notre vecteur donc ici nous sommes sure du type de E. Ce sera celui de valeur
+
+				BigInteger bi2 = (BigInteger) valeur;
+				Vector<Integer> res = new Vector<Integer>();
+
+				for (int i =0 ; i<bi1.intValue();i++) {
+
+					res.addElement(bi2.intValue());
+				}
+				return res;			
+			}
+			else if ( valeur instanceof BigDecimal) {
+				//Vector<Double>
+				BigDecimal bi2 = (BigDecimal) valeur;
+				Vector<Double> res = new Vector<Double>();
+				for (int i=0; i<bi1.intValue();i++) {
+					res.add(bi2.doubleValue());
+				}
+				return res;
+			}
+			else {
+				String msg = "value must be an integer or a Double";
+				throw new EvaluationException(msg);
 			}
 		}
+		else {
+			String msg = "length must be an integer";
+			throw new EvaluationException(msg);
+		}
 	
-		return null;
 	}
 
 }

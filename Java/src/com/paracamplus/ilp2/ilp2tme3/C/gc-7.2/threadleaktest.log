@@ -1,10 +1,10 @@
-Leaked composite object at 0x56453af61fe0 (tests/thread_leak_test.c:29, sz=4, NORMAL)
+Leaked composite object at 0x55ed590a9fe0 (tests/thread_leak_test.c:29, sz=4, NORMAL)
 
-Leaked composite object at 0x56453af61f20 (tests/thread_leak_test.c:29, sz=4, NORMAL)
+Leaked composite object at 0x55ed590a9f20 (tests/thread_leak_test.c:29, sz=4, NORMAL)
 
-Leaked composite object at 0x56453af61ef0 (tests/thread_leak_test.c:29, sz=4, NORMAL)
+Leaked composite object at 0x55ed590a9ef0 (tests/thread_leak_test.c:29, sz=4, NORMAL)
 
-Leaked composite object at 0x56453af61fe0 (tests/thread_leak_test.c:29, sz=4, NORMAL)
+Leaked composite object at 0x55ed590a9fe0 (tests/thread_leak_test.c:29, sz=4, NORMAL)
 
-Leaked composite object at 0x56453af61f20 (tests/thread_leak_test.c:29, sz=4, NORMAL)
+Leaked composite object at 0x55ed590a9f20 (tests/thread_leak_test.c:29, sz=4, NORMAL)
 
