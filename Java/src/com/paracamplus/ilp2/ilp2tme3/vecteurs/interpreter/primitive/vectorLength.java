@@ -2,6 +2,7 @@ package com.paracamplus.ilp2.ilp2tme3.vecteurs.interpreter.primitive;
 import java.math.BigInteger;
 import java.util.Vector;
 
+import com.paracamplus.ilp1.interpreter.interfaces.EvaluationException;
 import com.paracamplus.ilp1.interpreter.primitive.Primitive;
 
 public class vectorLength<E> extends Primitive{
@@ -14,12 +15,21 @@ public class vectorLength<E> extends Primitive{
 	@Override
 	public int getArity() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 	
-	public Object apply(Vector<E> vector) {
-		BigInteger sizeVec = BigInteger.valueOf(vector.size());
-		return sizeVec;
+	public Object apply(Object vector) throws EvaluationException {
+		
+		if (vector instanceof Vector) {
+			Vector<?> vect = (Vector) vector;
+			return vect.size();
+		}
+		else {
+			String msg = "object must be a vector";
+			throw new EvaluationException(msg);
+		}
+		//BigInteger sizeVec = BigInteger.valueOf(vector.size());
+		//System.out.print(sizeVec.intValue());
 	}
 
 }

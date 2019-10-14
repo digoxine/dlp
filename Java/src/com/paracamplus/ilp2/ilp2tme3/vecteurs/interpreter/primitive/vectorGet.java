@@ -17,7 +17,7 @@ public class vectorGet<E> extends Primitive{
 	@Override
 	public int getArity() {
 		// TODO Auto-generated method stub
-		return 1;
+		return 2;
 	}
 	
 	public Object apply(Vector<E> vector, Object index) throws EvaluationException {

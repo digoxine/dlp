@@ -1,12 +1,9 @@
 package com.paracamplus.ilp2.ilp2tme3.vecteurs.interpreter.primitive;
 
-import java.lang.reflect.ParameterizedType;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.List;
 import java.util.Vector;
 
-import org.junit.runners.Parameterized;
 
 import com.paracamplus.ilp1.interpreter.interfaces.EvaluationException;
 import com.paracamplus.ilp1.interpreter.primitive.Primitive;
