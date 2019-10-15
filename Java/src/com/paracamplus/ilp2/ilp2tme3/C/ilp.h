@@ -390,7 +390,21 @@ extern ILP_Object ILP_or (ILP_Object o1, ILP_Object o2);
 extern ILP_Object ILP_xor (ILP_Object o1, ILP_Object o2);
 extern ILP_Object ILP_newline ();
 extern ILP_Object ILP_print (ILP_Object self);
+
+
+
+///AJOUT
+
 extern ILP_Object ILP_sinus (ILP_Object self);
+extern ILP_Object ILP_length (ILP_Object self);
+extern ILP_Object ILP_get (ILP_Object self, ILP_Object o2);
+extern ILP_Object ILP_vector (ILP_Object self,ILP_Object o2);
+
+//FIN AJOUT
+
+
+
+
 extern ILP_Object ILPm_print (ILP_Closure useless, ILP_Object self);
 extern ILP_Object ILP_classOf (ILP_Object self);
 extern ILP_Object ILPm_classOf (ILP_Closure useless, ILP_Object self);

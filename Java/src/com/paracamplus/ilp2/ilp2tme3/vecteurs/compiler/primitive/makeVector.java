@@ -1,4 +1,4 @@
-package com.paracamplus.ilp2.ilp2tme3.vecteurs.interpreter.primitive;
+package com.paracamplus.ilp2.ilp2tme3.vecteurs.compiler.primitive;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

@@ -4,7 +4,7 @@
  * See http://mooc.paracamplus.com/ilp1
  * GPL version 3
  ***************************************************************** */
-package com.paracamplus.ilp2.ilp2tme3.compiler.test;
+package com.paracamplus.ilp2.ilp2tme3.vecteurs.compiler.test;
 
 import java.io.File;
 import java.util.Collection;

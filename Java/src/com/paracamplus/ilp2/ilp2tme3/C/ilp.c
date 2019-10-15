@@ -657,6 +657,9 @@ ILP_concatenate_strings (ILP_Object o1, ILP_Object o2)
 
 /** Unary operators */
 
+
+
+
 ILP_Object
 ILP_sinus(ILP_Object o)
 {
@@ -958,3 +961,26 @@ ILPm_classOf (ILP_Closure useless, ILP_Object self)
 }
 
 /* end of ilpObj.c */
+
+//Ajout primitives vectors
+/*
+ILP_Object 
+ILP_get(ILP_Object o, ILP_Object o2)
+{
+	printf(o);
+	return NULL;
+}
+*/
+ILP_Object
+ILP_vector(ILP_Object o, ILP_Object o2)
+{
+  return NULL;
+}
+/*
+ILP_Object
+ILP_length(ILP_Object o)
+{
+  printf(o);
+ return NULL;
+}
+*/
