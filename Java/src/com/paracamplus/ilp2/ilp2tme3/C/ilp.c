@@ -963,24 +963,23 @@ ILPm_classOf (ILP_Closure useless, ILP_Object self)
 /* end of ilpObj.c */
 
 //Ajout primitives vectors
-/*
+
 ILP_Object 
 ILP_get(ILP_Object o, ILP_Object o2)
 {
-	printf(o);
 	return NULL;
 }
-*/
+
 ILP_Object
 ILP_vector(ILP_Object o, ILP_Object o2)
 {
+  printf("blablabla\n");
   return NULL;
 }
-/*
+
 ILP_Object
 ILP_length(ILP_Object o)
 {
-  printf(o);
  return NULL;
 }
-*/
+
