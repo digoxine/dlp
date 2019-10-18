@@ -26,4 +26,5 @@ public interface IASTfactory extends com.paracamplus.ilp1.interfaces.IASTfactory
     IASTexpression newAssignment(IASTvariable variable,
             IASTexpression value);
     
+    
 }

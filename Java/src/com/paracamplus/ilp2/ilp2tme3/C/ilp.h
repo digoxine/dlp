@@ -17,6 +17,7 @@
 #include <setjmp.h>
 #include <math.h>
 
+
 /** Compatibility */
 #if !defined(__APPLE_CC__)
 extern int snprintf(char *str, size_t size, const char *format, ...);
@@ -44,6 +45,10 @@ typedef struct ILP_Object {
           unsigned char asBoolean;
           int           asInteger;
           double        asFloat;
+          struct asVector {
+        	   int                _size;
+        	   struct ILP_Object* asElem[1];
+          } asVector;
           struct asString {
                int      _size;
                char     asCharacter[1];
@@ -275,6 +280,14 @@ extern ILP_Object ILP_dont_call_super_method(
                 + ((count) * sizeof(struct ILP_Object)), \
                 &ILP_object_Closure_class)
 
+/** Vector */
+#define ILP_AllocateVector(length) \
+	ILP_malloc(sizeof(struct ILP_Object) \
+				 + (sizeof(struct ILP_Object) * (length)), &ILP_object_Vector_class)
+
+#define ILP_isVector(o) \
+  ((o)->_class == &ILP_object_Vector_class)
+
 /** String */
 
 #define ILP_String2ILP(s) \
@@ -390,24 +403,19 @@ extern ILP_Object ILP_or (ILP_Object o1, ILP_Object o2);
 extern ILP_Object ILP_xor (ILP_Object o1, ILP_Object o2);
 extern ILP_Object ILP_newline ();
 extern ILP_Object ILP_print (ILP_Object self);
-
-
-
-///AJOUT
-
-extern ILP_Object ILP_sinus (ILP_Object self);
-extern ILP_Object ILP_length (ILP_Object self);
-extern ILP_Object ILP_get (ILP_Object self, ILP_Object o2);
-extern ILP_Object ILP_vector (ILP_Object self,ILP_Object o2);
-
-//FIN AJOUT
-
-
-
-
 extern ILP_Object ILPm_print (ILP_Closure useless, ILP_Object self);
 extern ILP_Object ILP_classOf (ILP_Object self);
 extern ILP_Object ILPm_classOf (ILP_Closure useless, ILP_Object self);
+
+
+
+extern ILP_Object ILP_sinus (ILP_Object o1);
+extern ILP_Object ILP_makeVector (ILP_Object taille, ILP_Object elem);
+extern ILP_Object ILP_vectorLength (ILP_Object vecteur);
+extern ILP_Object ILP_vectorGet (ILP_Object vecteur, ILP_Object taille);
+
+
+
 
 extern ILP_Object ILP_malloc (int size, ILP_Class class);
 extern ILP_Object ILP_make_instance (ILP_Class class);

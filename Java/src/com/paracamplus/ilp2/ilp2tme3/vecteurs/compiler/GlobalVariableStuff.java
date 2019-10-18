@@ -21,11 +21,11 @@ public class GlobalVariableStuff {
         env.addGlobalFunctionValue(
                 new Primitive("sinus", "ILP_sinus", 1));
         env.addGlobalFunctionValue(
-        		new Primitive("vector", "ILP_vector",2));
+        		new Primitive("vector", "ILP_makeVector",2));
         env.addGlobalFunctionValue(
-        		new Primitive("get", "ILP_get",2));
+        		new Primitive("get", "ILP_vectorGet",2));
         env.addGlobalFunctionValue(
-        		new Primitive("length", "ILP_length",1));
+        		new Primitive("length", "ILP_vectorLength",1));
     
     }
 }
