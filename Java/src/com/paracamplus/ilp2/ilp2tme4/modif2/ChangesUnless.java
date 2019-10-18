@@ -64,12 +64,14 @@ public class ChangesUnless implements IASTvisitor<IASTexpression, Void ,Evaluati
 	@Override
 	public IASTexpression visit(IASTblock iast, Void data) throws EvaluationException {
 		// TODO Auto-generated method stub
-		//IASTbinding [] bindings = new ASTbinding [iast.getBindings().length];
+		IASTbinding[] bindings = new IASTbinding [iast.getBindings().length];
 		int i=0;
 		for(IASTbinding elem : iast.getBindings()) {
+			bindings[i] = new ASTblock.ASTbinding(elem.getVariable(),elem.getInitialisation().accept(this, data));
 			i++;
+			
 		}
-		return new ASTblock(iast.getBindings(),iast.getBody().accept(this, data));
+		return new ASTblock(bindings,iast.getBody().accept(this, data));
 	}
 
 	@Override
