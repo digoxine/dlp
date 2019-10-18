@@ -1,20 +1,14 @@
-package com.paracamplus.ilp2.ilp2tme4.modif2;
+package com.paracamplus.ilp2.ilp2tme4.solution3;
 
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
-import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
-
-import com.paracamplus.ilp1.interfaces.IASTexpression;
-import com.paracamplus.ilp1.interpreter.interfaces.EvaluationException;
 import com.paracamplus.ilp1.parser.ParseException;
 import com.paracamplus.ilp2.ilp2tme4.modif2.interfaces.IASTfactory;
 import com.paracamplus.ilp2.interfaces.IASTprogram;
 import com.paracamplus.ilp2.ilp2tme4.modif2.ILPMLListener;
 import antlr4.ILPMLGrammar2tme4Lexer;
 import antlr4.ILPMLGrammar2tme4Parser;
-import com.paracamplus.ilp2.ilp2tme4.modif2.interfaces.IASTvisitor;
 
 public class ILPMLParser extends com.paracamplus.ilp2.parser.ilpml.ILPMLParser {
 
@@ -37,9 +31,7 @@ public class ILPMLParser extends com.paracamplus.ilp2.parser.ilpml.ILPMLParser {
 			// parcours de l'arbre syntaxique et appels du Listener
 			ParseTreeWalker walker = new ParseTreeWalker();
 			
-			
-			IASTvisitor<IASTexpression, Void, EvaluationException> elem1 = new ChangesUnless();
-			
+						
 			ILPMLListener extractor = new ILPMLListener((IASTfactory) factory);
 			//tree.node.getBody().accept(elem1, null);
 
