@@ -1,4 +1,4 @@
-package com.paracamplus.ilp2.ilp2tme4.modifListPars.parser.ilpml.interpreter.test;
+package com.paracamplus.ilp2.ilp2tme4.solution1.interpreter.test;
 
 import java.io.File;
 import java.io.StringWriter;
@@ -16,9 +16,9 @@ import com.paracamplus.ilp1.interpreter.test.InterpreterRunner;
 import com.paracamplus.ilp1.parser.xml.IXMLParser;
 import com.paracamplus.ilp2.ast.ASTfactory;
 import com.paracamplus.ilp2.ilp2tme3.vecteurs.interpreter.GlobalVariableStuff;
+import com.paracamplus.ilp2.ilp2tme4.solution1.ILPMLParser;
 import com.paracamplus.ilp2.interfaces.IASTfactory;
 import com.paracamplus.ilp2.interpreter.Interpreter;
-import com.paracamplus.ilp2.ilp2tme4.modifListPars.parser.ilpml.ILPMLParser;
 import com.paracamplus.ilp2.parser.xml.XMLParser;
 
 public class InterpreterTest extends com.paracamplus.ilp2.ilp2tme3.vecteurs.interpreter.test.InterpreterTest {

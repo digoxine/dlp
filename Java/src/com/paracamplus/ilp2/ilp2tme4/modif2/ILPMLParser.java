@@ -10,7 +10,10 @@ import com.paracamplus.ilp1.interfaces.IASTexpression;
 import com.paracamplus.ilp1.interpreter.interfaces.EvaluationException;
 import com.paracamplus.ilp1.parser.ParseException;
 import com.paracamplus.ilp2.ilp2tme4.modif2.interfaces.IASTfactory;
+import com.paracamplus.ilp2.interfaces.IASTfunctionDefinition;
 import com.paracamplus.ilp2.interfaces.IASTprogram;
+import com.paracamplus.ilp2.ast.ASTfunctionDefinition;
+import com.paracamplus.ilp2.ast.ASTprogram;
 import com.paracamplus.ilp2.ilp2tme4.modif2.ILPMLListener;
 import antlr4.ILPMLGrammar2tme4Lexer;
 import antlr4.ILPMLGrammar2tme4Parser;
@@ -37,15 +40,24 @@ public class ILPMLParser extends com.paracamplus.ilp2.parser.ilpml.ILPMLParser {
 			// parcours de l'arbre syntaxique et appels du Listener
 			ParseTreeWalker walker = new ParseTreeWalker();
 			
+			//ICI
+			
 			
 			IASTvisitor<IASTexpression, Void, EvaluationException> elem1 = new ChangesUnless();
+			//tree.node.getBody().accept(elem1, null);
+			
+			
+			//Fin 
+			
 			
 			ILPMLListener extractor = new ILPMLListener((IASTfactory) factory);
-			//tree.node.getBody().accept(elem1, null);
 
 			walker.walk(extractor,tree);
+	
+			return new ASTprogram(tree.node.getFunctionDefinitions(),tree.node.getBody().accept(elem1, null));
 
-			return tree.node;
+
+			//return tree.node;
 		} catch (Exception e) {
 			throw new ParseException(e);
 		}
