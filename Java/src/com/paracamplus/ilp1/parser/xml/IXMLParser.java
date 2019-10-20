@@ -18,7 +18,6 @@ import com.paracamplus.ilp1.interfaces.IASTexpression;
 import com.paracamplus.ilp1.interfaces.IASTprogram;
 import com.paracamplus.ilp1.parser.ParseException;
 import com.paracamplus.ilp1.tools.Input;
-
 public interface IXMLParser {
 	IASTfactory getFactory();
     IASTprogram getProgram() throws ParseException;

@@ -19,7 +19,7 @@ import com.paracamplus.ilp2.ilp2tme4.solution3.interfaces.IASTfactory;
 import com.paracamplus.ilp2.ilp2tme3.vecteurs.interpreter.GlobalVariableStuff;
 import com.paracamplus.ilp2.ilp2tme4.solution3.interpreter.Interpreter;
 import com.paracamplus.ilp2.ilp2tme4.solution3.ILPMLParser;
-import com.paracamplus.ilp2.parser.xml.XMLParser;
+import com.paracamplus.ilp2.ilp2tme4.solution3.XMLParser;;
 
 public class InterpreterTest extends com.paracamplus.ilp2.interpreter.test.InterpreterTest {
     public InterpreterTest(File file) {
@@ -33,11 +33,11 @@ public class InterpreterTest extends com.paracamplus.ilp2.interpreter.test.Inter
     
     public void configureRunner(InterpreterRunner run) throws EvaluationException {
     	// configuration du parseur
-        IASTfactory factory =  new ASTfactory();
-        IXMLParser xmlparser = new XMLParser(factory);
+        IASTfactory factory =   new ASTfactory();
+        IXMLParser xmlparser = new XMLParser((IASTfactory)factory);
         xmlparser.setGrammar(new File(XMLgrammarFile));
         run.setXMLParser(xmlparser);
-        run.setILPMLParser(new ILPMLParser((IASTfactory) factory));
+        run.setILPMLParser(new ILPMLParser( (IASTfactory)factory));
 
         // configuration de l'interprète
         StringWriter stdout = new StringWriter();
