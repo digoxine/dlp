@@ -3,9 +3,9 @@ package com.paracamplus.ilp2.ilp2tme4.solution3.ast;
 import com.paracamplus.ilp1.ast.ASTexpression;
 import com.paracamplus.ilp1.interfaces.IASTexpression;
 import com.paracamplus.ilp2.ilp2tme4.modif2.interfaces.IASTunless;
-
+import com.paracamplus.ilp1.interfaces.IASTvisitable;
 public class ASTunless extends ASTexpression 
-implements IASTunless {
+implements IASTunless,IASTvisitable {
 
 	public ASTunless(IASTexpression body, IASTexpression condition) {
 		this.condition = condition;
