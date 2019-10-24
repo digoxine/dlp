@@ -6,10 +6,7 @@
  ***************************************************************** */
 package com.paracamplus.ilp2.ilp2tme4.solution3.compiler.interfaces;
 
-
-
-
-
-public interface IASTCvisitor<Result, Data, Anomaly extends Throwable> extends IASTvisitor<Result, Data, Anomaly>
+public interface IASTCvisitor<Result, Data, Anomaly extends Throwable> 
+extends IASTvisitor<Result, Data, Anomaly>
  {
  }

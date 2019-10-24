@@ -221,6 +221,8 @@ extern ILP_Object ILP_dont_call_super_method(
 
 #define ILP_isEquivalentToTrue(o) \
   ((o) != ILP_FALSE)
+#define ILP_isEquivalentToFalse(o)\
+  ((o) == ILP_FALSE)
 
 #define ILP_CheckIfBoolean(o) \
   if ( ! ILP_isBoolean(o) ) { \

@@ -1,5 +1,5 @@
 /* *****************************************************************
- * ILP9 - Implantation d'un langage de programmation.
+// * ILP9 - Implantation d'un langage de programmation.
  * by Christian.Queinnec@paracamplus.com
  * See http://mooc.paracamplus.com/ilp9
  * GPL version 3
@@ -13,8 +13,8 @@ import java.util.Set;
 
 import com.paracamplus.ilp1.compiler.AssignDestination;
 import com.paracamplus.ilp1.compiler.CompilationException;
-import com.paracamplus.ilp2.compiler.FreeVariableCollector;
-import com.paracamplus.ilp2.compiler.GlobalVariableCollector;
+//import com.paracamplus.ilp2.compiler.FreeVariableCollector;
+//import com.paracamplus.ilp2.compiler.GlobalVariableCollector;
 import com.paracamplus.ilp1.compiler.NoDestination;
 import com.paracamplus.ilp1.compiler.ReturnDestination;
 import com.paracamplus.ilp1.compiler.VoidDestination;

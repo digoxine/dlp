@@ -7,6 +7,7 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import com.paracamplus.ilp1.parser.ParseException;
 import com.paracamplus.ilp2.ilp2tme4.solution3.interfaces.IASTfactory;
 import com.paracamplus.ilp2.interfaces.IASTprogram;
+import com.paracamplus.ilp2.ast.ASTprogram;
 import com.paracamplus.ilp2.ilp2tme4.solution3.ILPMLListener;
 import antlr4.ILPMLGrammar2tme4Lexer;
 import antlr4.ILPMLGrammar2tme4Parser;
@@ -37,6 +38,8 @@ public class ILPMLParser extends com.paracamplus.ilp2.parser.ilpml.ILPMLParser {
 
 			walker.walk(extractor,tree);
 			return tree.node;
+			//return new ASTprogram(tree.node.getFunctionDefinitions(),tree.node.getBody().accept(elem1, null));
+
 		} catch (Exception e) {
 			throw new ParseException(e);
 		}

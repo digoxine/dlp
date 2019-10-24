@@ -34,10 +34,10 @@ public class InterpreterTest extends com.paracamplus.ilp2.interpreter.test.Inter
     public void configureRunner(InterpreterRunner run) throws EvaluationException {
     	// configuration du parseur
         IASTfactory factory =   new ASTfactory();
-        IXMLParser xmlparser = new XMLParser((IASTfactory)factory);
+        IXMLParser xmlparser = new XMLParser(factory);
         xmlparser.setGrammar(new File(XMLgrammarFile));
         run.setXMLParser(xmlparser);
-        run.setILPMLParser(new ILPMLParser( (IASTfactory)factory));
+        run.setILPMLParser(new ILPMLParser(factory));
 
         // configuration de l'interprète
         StringWriter stdout = new StringWriter();

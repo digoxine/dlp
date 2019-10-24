@@ -23,10 +23,10 @@ import com.paracamplus.ilp1.compiler.interfaces.IOperatorEnvironment;
 import com.paracamplus.ilp1.compiler.optimizer.IdentityOptimizer;
 import com.paracamplus.ilp1.compiler.test.CompilerRunner;
 import com.paracamplus.ilp1.parser.xml.IXMLParser;
-import com.paracamplus.ilp2.ilp2tme4.solution3.ast.ASTfactory;
+import com.paracamplus.ilp2.ilp2tme4.solution3.compiler.ast.ASTfactory;
 import com.paracamplus.ilp2.ilp2tme4.solution3.compiler.Compiler;
-import com.paracamplus.ilp2.ilp2tme4.solution3.interfaces.IASTfactory;
-import com.paracamplus.ilp2.ilp2tme4.solution3.ILPMLParser;
+import com.paracamplus.ilp2.ilp2tme4.solution3.compiler.interfaces.IASTfactory;
+import com.paracamplus.ilp2.ilp2tme4.solution3.compiler.ILPMLParser;
 import com.paracamplus.ilp2.parser.xml.XMLParser;
 
 @RunWith(Parameterized.class)
@@ -45,10 +45,10 @@ public class CompilerTest extends com.paracamplus.ilp2.compiler.test.CompilerTes
     public void configureRunner(CompilerRunner run) throws CompilationException {
     	// configuration du parseur
         IASTfactory factory = new ASTfactory();
-        IXMLParser xMLParser = new XMLParser((IASTfactory) factory);
+        IXMLParser xMLParser = new XMLParser(factory);
         xMLParser.setGrammar(new File(XMLgrammarFile));
         run.setXMLParser(xMLParser);
-        run.setILPMLParser(new ILPMLParser((IASTfactory)factory));
+        run.setILPMLParser(new ILPMLParser(factory));
 
         // configuration du compilateur
         IOperatorEnvironment ioe = new OperatorEnvironment();
