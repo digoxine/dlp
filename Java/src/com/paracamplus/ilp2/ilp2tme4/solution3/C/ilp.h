@@ -216,6 +216,7 @@ extern ILP_Object ILP_dont_call_super_method(
   (((o)->_class == &ILP_object_Boolean_class) && \
    ((o)->_content.asBoolean))
 
+
 #define ILP_TRUE  (&ILP_object_true)
 #define ILP_FALSE (&ILP_object_false)
 

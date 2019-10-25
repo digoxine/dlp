@@ -27,7 +27,7 @@ public class InterpreterTest extends com.paracamplus.ilp2.interpreter.test.Inter
 	}
 
 
-	protected static String[] samplesDirName = { "SamplesTME3","SamplesTME4"};
+	protected static String[] samplesDirName = { "SamplesTME3","SamplesTME4","SamplesTME5"};
 	 
     protected static String pattern = ".*";
     

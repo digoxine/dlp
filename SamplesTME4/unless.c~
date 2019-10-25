@@ -21,20 +21,16 @@ ilptmp1 = ILP_Integer2ILP(1);
   ILP_Object ilptmp2; 
 { 
   ILP_Object ilptmp3; 
-{ 
   ILP_Object ilptmp4; 
-  ILP_Object ilptmp5; 
-ilptmp4 = x1; 
-ilptmp5 = ILP_Integer2ILP(2); 
-ilptmp3 = ILP_Equal(ilptmp4, ilptmp5);
+ilptmp3 = x1; 
+ilptmp4 = ILP_Integer2ILP(2); 
+ilptmp2 = ILP_Equal(ilptmp3, ilptmp4);
 } 
-ilptmp2 = ILP_Not(ilptmp3);
-} 
-  if ( ILP_isEquivalentToTrue(ilptmp2 ) ) {
-return ILP_Integer2ILP(1); 
+  if ( ILP_isEquivalentToFalse(ilptmp2 ) ) {
+return ILP_Integer2ILP(9); 
 
-  } else {
-return ILP_FALSE; 
+ } else{
+return ILP_Boolean2ILP(1); 
 
   }
 }

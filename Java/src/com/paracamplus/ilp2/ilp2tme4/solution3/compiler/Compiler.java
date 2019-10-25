@@ -58,7 +58,8 @@ implements IASTCvisitor<Void, Compiler.Context, CompilationException>{
         emit(tmp1.getMangledName());
         emit(" ) ) {\n");
         iast.getBody().accept(this, data);
-    
+        emit("\n } else{\n");
+        emit("return ILP_Boolean2ILP(1); \n");
         emit("\n  }\n}\n");		
         return null;
 	}
