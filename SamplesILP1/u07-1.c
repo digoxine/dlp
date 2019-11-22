@@ -13,9 +13,9 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp32;
-    ilptmp32 = ILP_Integer2ILP (34);
-    return ILP_Opposite (ilptmp32);
+    ILP_Object ilptmp388;
+    ilptmp388 = ILP_Integer2ILP (34);
+    return ILP_Opposite (ilptmp388);
   }
 
 }

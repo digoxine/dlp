@@ -1,5 +1,5 @@
 # 1 "list_atomic.c"
-# 1 "/users/nfs/Etu7/3302297/Documents/dlp/ILP_SU/C/gc-7.2/libatomic_ops/tests//"
+# 1 "/users/nfs/Etu7/3302297/Documents/dlp/dlp/C/gc-7.2/libatomic_ops/tests//"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4

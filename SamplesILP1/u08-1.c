@@ -13,9 +13,9 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp70;
-    ilptmp70 = ILP_TRUE;
-    return ILP_Not (ilptmp70);
+    ILP_Object ilptmp426;
+    ilptmp426 = ILP_TRUE;
+    return ILP_Not (ilptmp426);
   }
 
 }

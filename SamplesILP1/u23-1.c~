@@ -12,9 +12,9 @@
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp122; 
-ilptmp122 = ILP_FALSE; 
-  if ( ILP_isEquivalentToTrue(ilptmp122 ) ) {
+  ILP_Object ilptmp478; 
+ilptmp478 = ILP_FALSE; 
+  if ( ILP_isEquivalentToTrue(ilptmp478 ) ) {
 return ILP_Integer2ILP(1); 
 
   } else {

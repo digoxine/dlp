@@ -13,9 +13,9 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp126;
-    ilptmp126 = ILP_TRUE;
-    if (ILP_isEquivalentToTrue (ilptmp126))
+    ILP_Object ilptmp482;
+    ilptmp482 = ILP_TRUE;
+    if (ILP_isEquivalentToTrue (ilptmp482))
       {
 	return ILP_Float2ILP (1.5);
 

@@ -12,11 +12,11 @@
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp128; 
-ilptmp128 = ILP_Integer2ILP(11); 
+  ILP_Object ilptmp484; 
+ilptmp484 = ILP_Integer2ILP(11); 
 
   {
-    ILP_Object x1 = ilptmp128;
+    ILP_Object x1 = ilptmp484;
 return x1; 
 
   }

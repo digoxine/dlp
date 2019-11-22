@@ -13,9 +13,9 @@ ILP_Object print;
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp262; 
-ilptmp262 =  ILP_String2ILP("Ceci est une chaine"); 
-return ILP_print(ilptmp262);
+  ILP_Object ilptmp618; 
+ilptmp618 =  ILP_String2ILP("Ceci est une chaine"); 
+return ILP_print(ilptmp618);
 }
 
 } 

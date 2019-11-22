@@ -13,11 +13,11 @@ ILP_Object pi;
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp235; 
-  ILP_Object ilptmp236; 
-ilptmp235 = ILP_PI; 
-ilptmp236 = ILP_Float2ILP(0.1415926535); 
-return ILP_Minus(ilptmp235, ilptmp236);
+  ILP_Object ilptmp591; 
+  ILP_Object ilptmp592; 
+ilptmp591 = ILP_PI; 
+ilptmp592 = ILP_Float2ILP(0.1415926535); 
+return ILP_Minus(ilptmp591, ilptmp592);
 } 
 
 } 

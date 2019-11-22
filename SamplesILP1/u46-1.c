@@ -14,23 +14,23 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp267;
+    ILP_Object ilptmp623;
     {
-      ILP_Object ilptmp268;
-      ilptmp268 = ILP_String2ILP ("Un, ");
-      ilptmp267 = ILP_print (ilptmp268);
+      ILP_Object ilptmp624;
+      ilptmp624 = ILP_String2ILP ("Un, ");
+      ilptmp623 = ILP_print (ilptmp624);
     }
     {
-      ILP_Object ilptmp269;
-      ilptmp269 = ILP_String2ILP ("deux et ");
-      ilptmp267 = ILP_print (ilptmp269);
+      ILP_Object ilptmp625;
+      ilptmp625 = ILP_String2ILP ("deux et ");
+      ilptmp623 = ILP_print (ilptmp625);
     }
     {
-      ILP_Object ilptmp270;
-      ilptmp270 = ILP_String2ILP ("trois.");
-      ilptmp267 = ILP_print (ilptmp270);
+      ILP_Object ilptmp626;
+      ilptmp626 = ILP_String2ILP ("trois.");
+      ilptmp623 = ILP_print (ilptmp626);
     }
-    return ilptmp267;
+    return ilptmp623;
   }
 
 }
